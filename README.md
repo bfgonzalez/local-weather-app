@@ -1,1 +1,1 @@
-This is a local weather web app, which was built in partial fulfillment of the requirements for FreeCodeCamp's Frontend Web Development curriculum
+This is a simple local weather app made using HTML, CSS, Javascript, jQuery, and a weather API. This project was built in partial fulfillment of the requirements for FreeCodeCamp's Frontend Web Development curriculum.
