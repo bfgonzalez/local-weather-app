@@ -15,12 +15,12 @@ $(document).ready(function(){
     console.log("This browser does not support geolocation.");
   }
 
-  // Allows user to toggle between Celsius & Fahrenheit by clicking the "Celsius/Fahrenheit" text at the bottom 
+  // Allows user to toggle between Celsius & Fahrenheit by clicking the "Celsius/Fahrenheit" text at the bottom
   $("#switch").click(function () {
-    var currentTempUnit = $("#tempUnit").text();
+    var currentTempUnit = $("#temp-unit").text();
     var newTempUnit = currentTempUnit == "C" ? "F" : "C";
-    $("#tempUnit").text(newTempUnit);
-    
+    $("#temp-unit").text(newTempUnit);
+
     if (newTempUnit == "F") {
       var fahr = Math.round(parseInt($("#temp").text()) * 9 / 5 + 32);
       $("#temp").text(fahr + " " + String.fromCharCode(176));
@@ -28,8 +28,8 @@ $(document).ready(function(){
       $("#temp").text(currentTempCelsius + " " + String.fromCharCode(176));
     }
   });
-  
-})
+
+});
 
 //App pulls in data from API for each respective text field
 function getWeather(lat, lon) {
@@ -40,7 +40,7 @@ function getWeather(lat, lon) {
       $("#country").text(data.sys.country);
       currentTempCelsius = Math.round(data.main.temp * 10) / 10;
       $("#temp").text(currentTempCelsius + " " + String.fromCharCode(176)); //String.fromCharCode(176) --> degree symbol
-      $("#tempunit").text(tempUnit);
+      $("#temp-unit").text(tempUnit);
       $("#desc").text(data.weather[0].main);
       IconGen(data.weather[0].main);
     }
@@ -77,5 +77,4 @@ function addIcon(desc) {
   $("div." + desc).removeClass("hide");
   $(".container-contents").show();
 }
-
 // end ready

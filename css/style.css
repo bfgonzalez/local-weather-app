@@ -1,52 +1,41 @@
-/* style of the main text: What's the weather like? */
-h1 {
-  color: #e3f2fd;
-  font-size: 40px;
-  text-transform: none;
-}
-
 /* main background style*/
 body {
-
-  /*background color if browser doesn't super gradient */
   background-color: #00212e;
-
-  /* gradient style for background if browser supports it */
-  background-image: linear-gradient(to right, #00212e, aqua);
-
-  /*font-family for text inside container */
   font-family: "Raleway", sans-serif;
-  font-size: 25px;
+  font-size: 1.75rem;
   text-align: center;
-  font-weight: bold;
   text-transform: uppercase;
 }
 
-/* For the box that holds & contains the weather app itself */
+/* weather app container */
 .weather-container {
-  background-color: #e3f2fd;
-  width: 350px;
-  height: 400px;
+  background-image: linear-gradient(to top, #256179, #33c0d3);
+  color: #e3f2fd;
+  width: 16rem;
+  height: 25rem;
   position: relative;
   display: block;
   text-align: center;
-  padding: 40px 50px;
-  margin: auto;
+  padding: 2.5rem 3.125rem;
+  margin: 4rem auto 1rem auto;
 }
 
 /* container contents in general */
 .container-contents {
-  display:none;
+  display: none;
 }
 
-/* location (city, country) */
 .location {
-  font-size: 30px;
+  font-size: 1.25rem;
 }
 
-/* weather info (temperature, temperature unit, description) */
-.weather {
-  font-size: 25px;
+#temp, #temp-unit {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+#desc {
+  font-size: 1rem;
 }
 
 /* for the respective weather icons */
@@ -58,14 +47,19 @@ body {
 
 /* switch between celsius or fahrenheit */
 #switch {
-  font-size: 15px;
+  font-size: 0.9rem;
   cursor: pointer;
-  margin-top: 70px;
+  margin-top: 4rem;
 }
 
 footer {
-  font-size: 15px;
+  font-size: 0.75rem;
   color: #e3f2fd;
+}
+
+footer a {
+  text-decoration: none;
+  color: cornflowerblue;
 }
 
 div.hide {
@@ -83,7 +77,7 @@ div.hide {
   margin: -1.84375rem;
   background: #e3f2fd;
   border-radius: 50%;
-  box-shadow: -2.1875rem 0.6875rem 0 -0.6875rem #e3f2fd, 2.0625rem 0.9375rem 0 -0.9375rem #e3f2fd, 0 0 0 0.375rem #90A4AE, -2.1875rem 0.6875rem 0 -0.3125rem #90A4AE, 2.0625rem 0.9375rem 0 -0.5625rem #90A4AE;
+  box-shadow: -2.1875rem 0.6875rem 0 -0.6875rem #e3f2fd, 2.0625rem 0.9375rem 0 -0.9375rem #e3f2fd, 0 0 0 0.375rem #e3f2fd, -2.1875rem 0.6875rem 0 -0.3125rem #e3f2fd, 2.0625rem 0.9375rem 0 -0.5625rem #e3f2fd;
 }
 
 .cloud:after {
@@ -95,13 +89,13 @@ div.hide {
   width: 4.5625rem;
   height: 1rem;
   background: #e3f2fd;
-  box-shadow: 0 0.375rem #90A4AE;
+  box-shadow: 0 0.375rem #e3f2fd;
 }
 
 .cloud:nth-child(2) {
   z-index: 0;
-  background: #37474F;
-  box-shadow: -2.1875rem 0.6875rem 0 -0.6875rem #37474F, 2.0625rem 0.9375rem 0 -0.9375rem #37474F, 0 0 0 0.375rem #37474F, -2.1875rem 0.6875rem 0 -0.3125rem #37474F, 2.0625rem 0.9375rem 0 -0.5625rem #37474F;
+  background: #e3f2fd;
+  box-shadow: -2.1875rem 0.6875rem 0 -0.6875rem #e3f2fd, 2.0625rem 0.9375rem 0 -0.9375rem #e3f2fd, 0 0 0 0.375rem #e3f2fd, -2.1875rem 0.6875rem 0 -0.3125rem #e3f2fd, 2.0625rem 0.9375rem 0 -0.5625rem #e3f2fd;
   opacity: 0.3;
   -webkit-transform: scale(0.5) translate(6rem, -3rem);
   -ms-transform: scale(0.5) translate(6rem, -3rem);
@@ -109,7 +103,7 @@ div.hide {
 }
 
 .cloud:nth-child(2):after {
-  background: #37474F;
+  background: #e3f2fd;
 }
 
 .sun {

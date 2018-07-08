@@ -5,22 +5,21 @@
     <title>Local Weather App</title>
 
     <script defer src="https://use.fontawesome.com/releases/v5.0.1/js/all.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway|Roboto" rel="stylesheet" type="text/css">
 
     <link rel="stylesheet" href="css/style.css">
   </head>
 
   <body>
-    <h1> What's the weather today? </h1>
     <div class="weather-container">
       <div class="container-contents">
+        <!--weather info(temperature, temperature unit, description)-->
+        <div class="weather">
+          <p><span id="temp"></span><span id="temp-unit">C</span></p>
+        </div>
         <!--location info (city, country)-->
         <div class="location">
           <p><span id="city"></span><span id="country"></span></p>
-        </div>
-        <!--weather info(temperature, temperature unit, description)-->
-        <div class="weather">
-          <p><span id="temp"></span><span id="tempUnit">C</span></p>
           <p><span id="desc"></span></p>
         </div>
         <!--weather icons inspired by Josh Bader-->
@@ -71,7 +70,7 @@
     </div>
 
     <footer>
-      <p class="text-center">Animated Weather Icons Inspired By <a href="https://codepen.io/joshbader/full/EjXgqr/" target="_blank">joshbader</a></p>
+      <p class="text-center">Weather Icons Inspired By <a href="https://codepen.io/joshbader/full/EjXgqr/" target="_blank">joshbader</a></p>
     </footer>
 
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
