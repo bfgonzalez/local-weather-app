@@ -53,8 +53,9 @@ body {
 }
 
 footer {
-  font-size: 0.75rem;
+  font-size: 0.74rem;
   color: #e3f2fd;
+  text-transform: none;
 }
 
 footer a {
