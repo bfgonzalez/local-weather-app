@@ -181,7 +181,7 @@ div.hide {
   content: '';
   position: absolute;
   z-index: 2;
-  top: 50%;
+  top: 90%;
   left: 50%;
   width: 1.125rem;
   height: 1.125rem;
