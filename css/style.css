@@ -1,19 +1,19 @@
 /* style of the main text: What's the weather like? */
 h1 {
-  color: #e3f2fd; 
+  color: #e3f2fd;
   font-size: 40px;
   text-transform: none;
 }
 
 /* main background style*/
 body {
-  
+
   /*background color if browser doesn't super gradient */
   background-color: #00212e;
-  
+
   /* gradient style for background if browser supports it */
   background-image: linear-gradient(to right, #00212e, aqua);
-    
+
   /*font-family for text inside container */
   font-family: "Raleway", sans-serif;
   font-size: 25px;
@@ -24,7 +24,7 @@ body {
 
 /* For the box that holds & contains the weather app itself */
 .weather-container {
-  background-color: #e3f2fd; /* remove color for reference */
+  background-color: #e3f2fd;
   width: 350px;
   height: 400px;
   position: relative;
@@ -36,21 +36,20 @@ body {
 
 /* container contents in general */
 .container-contents {
-  display:none; 
+  display:none;
 }
 
-/* location: city, country */
+/* location (city, country) */
 .location {
   font-size: 30px;
 }
 
-/* weather attributes: temp, temp unit, description */
+/* weather info (temperature, temperature unit, description) */
 .weather {
   font-size: 25px;
-  margin-bottom: 
 }
 
-/* for the respective weather icon */
+/* for the respective weather icons */
 .weather-icons {
   position: relative;
   display: inline-block;
@@ -65,8 +64,8 @@ body {
 }
 
 footer {
- font-size: 15px;
- color: #e3f2fd;
+  font-size: 15px;
+  color: #e3f2fd;
 }
 
 div.hide {
@@ -76,7 +75,7 @@ div.hide {
 
 .cloud {
   position: absolute;
-  z-index: 1;   
+  z-index: 1;
   top: 50%;
   left: 50%;
   width: 3.6875rem;
@@ -175,7 +174,7 @@ div.hide {
 .snow {
   position: absolute;
   z-index: 2;
-  top: 50%; 
+  top: 50%;
   left: 50%;
   width: 3.75rem;
   height: 1.5rem; /*orig height: 1.5rem */
@@ -197,7 +196,7 @@ div.hide {
   box-shadow: 0.625rem 0.875rem 0 -0.125rem rgba(255, 255, 255, 0.2), -0.875rem 1.125rem 0 -0.125rem rgba(255, 255, 255, 0.2), -1.375rem -0.125rem 0 rgba(255, 255, 255, 0.2);
   -webkit-transform: rotate(-28deg);
   -webkit-animation: rain 3s linear infinite;
-} 
+}
 
 .bolt {
   position: absolute;
@@ -220,7 +219,7 @@ div.hide {
   -webkit-transform: translate(2.5rem, 2.25rem);
   -ms-transform: translate(2.5rem, 2.25rem);
   opacity: 0.2;
-  -webkit-animation: lightning 1.5s linear infinite; 
+  -webkit-animation: lightning 1.5s linear infinite;
 }
 
 .bolt:before,
@@ -348,31 +347,31 @@ div.hide {
 @-webkit-keyframes rain {
   0% {
     background: #0cf;
-    box-shadow: 
-      0.625rem 0.875rem 0 -0.125rem rgba(255, 255, 255, 0.2), 
-      -0.875rem 1.125rem 0 -0.125rem rgba(255, 255, 255, 0.2), 
+    box-shadow:
+      0.625rem 0.875rem 0 -0.125rem rgba(255, 255, 255, 0.2),
+      -0.875rem 1.125rem 0 -0.125rem rgba(255, 255, 255, 0.2),
       -1.375rem -0.125rem 0 #0cf;
   }
-  
+
   25% {
-    box-shadow: 
-      0.625rem 0.875rem 0 -0.125rem rgba(255, 255, 255, 0.2), 
-      -0.875rem 1.125rem 0 -0.125rem #0cf, 
+    box-shadow:
+      0.625rem 0.875rem 0 -0.125rem rgba(255, 255, 255, 0.2),
+      -0.875rem 1.125rem 0 -0.125rem #0cf,
       -1.375rem -0.125rem 0 rgba(255, 255, 255, 0.2);
   }
-  
+
   50% {
     background: rgba(255, 255, 255, 0.3);
-    box-shadow: 
-      0.625rem 0.875rem 0 -0.125rem #0cf, 
-      -0.875rem 1.125rem 0 -0.125rem rgba(255, 255, 255, 0.2), 
+    box-shadow:
+      0.625rem 0.875rem 0 -0.125rem #0cf,
+      -0.875rem 1.125rem 0 -0.125rem rgba(255, 255, 255, 0.2),
       -1.375rem -0.125rem 0 rgba(255, 255, 255, 0.2);
   }
-  
+
   100% {
-    box-shadow: 
-      0.625rem 0.875rem 0 -0.125rem rgba(255, 255, 255, 0.2), 
-      -0.875rem 1.125rem 0 -0.125rem rgba(255, 255, 255, 0.2), 
+    box-shadow:
+      0.625rem 0.875rem 0 -0.125rem rgba(255, 255, 255, 0.2),
+      -0.875rem 1.125rem 0 -0.125rem rgba(255, 255, 255, 0.2),
       -1.375rem -0.125rem 0 #0cf;
   }
 }
