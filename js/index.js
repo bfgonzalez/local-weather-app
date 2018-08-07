@@ -4,31 +4,28 @@ var tempUnit = "C";
 var currentTempCelsius;
 
 //Determines if user's browser supports geolocation once page loads
-$(document).ready(function(){
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(function (position) {
-      var lat = "lat=" + position.coords.latitude;
-      var lon = "lon=" + position.coords.longitude;
-      getWeather(lat, lon);
-    });
-  } else {
-    console.log("This browser does not support geolocation.");
-  }
-
-  // Allows user to toggle between Celsius & Fahrenheit by clicking the "Celsius/Fahrenheit" text at the bottom
-  $("#switch").click(function () {
-    var currentTempUnit = $("#temp-unit").text();
-    var newTempUnit = currentTempUnit == "C" ? "F" : "C";
-    $("#temp-unit").text(newTempUnit);
-
-    if (newTempUnit == "F") {
-      var fahr = Math.round(parseInt($("#temp").text()) * 9 / 5 + 32);
-      $("#temp").text(fahr + " " + String.fromCharCode(176));
-    } else {
-      $("#temp").text(currentTempCelsius + " " + String.fromCharCode(176));
-    }
+if (navigator.geolocation) {
+  navigator.geolocation.getCurrentPosition(function (position) {
+    var lat = "lat=" + position.coords.latitude;
+    var lon = "lon=" + position.coords.longitude;
+    getWeather(lat, lon);
   });
+} else {
+  console.log("This browser does not support geolocation.");
+}
 
+// Allows user to toggle between Celsius & Fahrenheit by clicking the "Celsius/Fahrenheit" text at the bottom
+$("#switch").click(function () {
+  var currentTempUnit = $("#temp-unit").text();
+  var newTempUnit = currentTempUnit == "C" ? "F" : "C";
+  $("#temp-unit").text(newTempUnit);
+
+  if (newTempUnit == "F") {
+    var fahr = Math.round(parseInt($("#temp").text()) * 9 / 5 + 32);
+    $("#temp").text(fahr + " " + String.fromCharCode(176));
+  } else {
+    $("#temp").text(currentTempCelsius + " " + String.fromCharCode(176));
+  }
 });
 
 //App pulls in data from API for each respective text field
