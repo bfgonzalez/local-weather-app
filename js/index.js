@@ -77,4 +77,3 @@ function addIcon(desc) {
   $("div." + desc).removeClass("hide");
   $(".container-contents").show();
 }
-// end ready
